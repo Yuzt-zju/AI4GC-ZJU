@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ContentSection from "@/components/layout/ContentSection";
 import LinkChip from "@/components/site/LinkChip";
 import TeamMemberCard from "@/components/site/TeamMemberCard";
@@ -10,7 +11,12 @@ import {
 import { TEAM_GROUPS } from "@/lib/content/paths";
 import type { TeamGroup } from "@/lib/content/paths";
 import { getTeamContent } from "@/lib/content";
+import { buildListPageMetadata } from "@/lib/site/page-metadata";
 import type { TeamMember } from "@/types/lab";
+
+export function generateMetadata(): Metadata {
+  return buildListPageMetadata("team", "/team");
+}
 
 function TeamGroup({
   title,

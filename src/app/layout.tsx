@@ -4,7 +4,9 @@ import { IBM_Plex_Mono, Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/site/SiteFooter";
+import JsonLd from "@/components/site/JsonLd";
 import { getSiteConfig } from "@/lib/content";
+import { absoluteUrl, getSiteUrl } from "@/lib/site/site-url";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -27,22 +29,45 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export function generateMetadata(): Metadata {
   const site = getSiteConfig();
+  const siteUrl = getSiteUrl();
+
   return {
-    title: site.name,
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: site.name,
+      template: `%s | ${site.name}`,
+    },
     description: site.description,
     icons: {
       icon: site.favicon,
     },
-    robots: {
-      index: false,
-      follow: false,
-      nocache: true,
-      googleBot: {
-        index: false,
-        follow: false,
-        noimageindex: true,
-      },
+    alternates: {
+      canonical: "/",
     },
+    openGraph: {
+      type: "website",
+      siteName: site.name,
+      title: site.name,
+      description: site.description,
+      url: siteUrl,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: site.name,
+      description: site.description,
+    },
+    robots: site.indexable
+      ? { index: true, follow: true }
+      : {
+          index: false,
+          follow: false,
+          nocache: true,
+          googleBot: {
+            index: false,
+            follow: false,
+            noimageindex: true,
+          },
+        },
   };
 }
 
@@ -54,6 +79,20 @@ export default async function RootLayout({
   const site = getSiteConfig();
   const headerList = await headers();
   const isAdminRoute = headerList.get("x-admin-route") === "1";
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    url: getSiteUrl(),
+    logo: absoluteUrl(site.logo),
+    description: site.description,
+    parentOrganization: {
+      "@type": "CollegeOrUniversity",
+      name: site.schoolName,
+      url: site.schoolHref,
+    },
+  };
 
   return (
     <html
@@ -67,6 +106,7 @@ export default async function RootLayout({
             : "surface-shell flex min-h-dvh flex-col font-body antialiased"
         }
       >
+        {!isAdminRoute ? <JsonLd data={organizationJsonLd} /> : null}
         {!isAdminRoute ? (
           <Navbar
             name={site.name}
