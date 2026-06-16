@@ -9,8 +9,8 @@ bio: >-
 tags:
   - Recommender Systems
   - LLM Agents
-  - Device-Cloud Collaboration
-  - Efficient Deployment
+  - Reinforcement Learning
+  - Model Customization
 email: unknownltq@gmail.com
 profile: true
 links:
