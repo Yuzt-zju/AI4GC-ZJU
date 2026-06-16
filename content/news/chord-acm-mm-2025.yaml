@@ -1,5 +1,6 @@
 date: Jul 2025
 title: CHORD accepted to ACM MM 2025
+featured: true
 desc: >-
   CHORD customizes a hybrid-precision on-device recommendation model for each
   instance, achieving personalized, resource-adaptive deployment in a single
