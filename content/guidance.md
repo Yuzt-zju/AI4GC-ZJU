@@ -713,7 +713,6 @@ content/home/modules/lab-partners/
 | `/team` 卡片入学/入职前缀    | `src/lib/content/constants.ts` → `TEAM_MEMBER_START_LABELS`；`src/lib/content/slug.ts` → `formatMemberStartMeta`      |
 | 安全响应头                | `src/lib/security/headers.ts`、`next.config.ts`                                                                       |
 | 爬虫策略（noindex）        | `src/app/robots.ts`、`src/app/layout.tsx`                                                                             |
-| 旧 URL 重定向            | `next.config.ts`（`/songhan`、`/song-han` → `/shengyu-zhang`）                                                          |
 | 成员资源路由               | `src/app/team-assets/[...path]/route.ts`                                                                             |
 | `/news` 分页           | `src/components/news/NewsPageClient.tsx`                                                                             |
 | `/blog` 分页           | `src/components/blog/BlogPageClient.tsx`                                                                             |

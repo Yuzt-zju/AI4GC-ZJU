@@ -83,8 +83,6 @@ content/
 | `/{member-folder}` | member `index.md` when `profile: true` (e.g. `/shengyu-zhang`, `/yurun-chen-2025-12551024`) |
 | `/team-assets/{group}/{member}/{file}` | local member assets |
 
-Legacy redirects: `/songhan` and `/song-han` → `/shengyu-zhang` in `next.config.ts`.
-
 There is no `content/pages/` directory. Profile pages are the Markdown body in each member's `index.md`.
 
 ## Team & profile conventions
