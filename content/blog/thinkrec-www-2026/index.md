@@ -8,9 +8,10 @@ links:
   - kind: code
     href: https://github.com/Yu-Qi-hang/ThinkRec
 desc: >-
-  Graph2Eval turns heterogeneous documents and web pages into a knowledge-graph
-  task space, enabling scalable, controllable, and semantically grounded
-  evaluation for RAG and web agents. Accepted to CVPR 2026.
+  ThinkRec reframes LLM-based recommendation as a reasoning problem rather than
+  pure pattern matching, letting the model explicitly reason about user
+  preferences to improve both recommendation quality and user trust. Accepted to
+  The Web Conference (WWW) 2026.
 tags:
   - LLM
   - Recommendation System
