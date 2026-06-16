@@ -4,7 +4,7 @@ desc: >-
   CHORD customizes a hybrid-precision on-device recommendation model for each user
   via device-cloud collaboration, achieving personalized, resource-adaptive
   deployment in a single forward pass.
-image: /blog-assets/chord-acm-mm-2025/chord-overview.png
+image: /blog-assets/chord-acm-mm-2025/chord-news.png
 imageAlt: Overview of CHORD device-cloud mixed-precision quantization
 links:
   - label: Blog
