@@ -35,12 +35,12 @@ Optional `.env.local` (see `.env.example`):
 
 | Concern | Location |
 | --- | --- |
-| Disallow crawlers | `src/app/robots.ts` (`Disallow: /`) |
-| Page-level noindex | `src/app/layout.tsx` → `generateMetadata().robots` |
+| Crawler policy (site-wide) | `content/site.yaml` → `indexable` drives `src/app/robots.ts` + `src/app/layout.tsx` → `generateMetadata().robots` |
+| Per-page noindex | member frontmatter `noindex: true` → `src/app/[slug]/page.tsx` robots + excluded from `src/app/sitemap.ts` |
 | Security headers (HSTS, CSP, etc.) | `src/lib/security/headers.ts`, wired in `next.config.ts` |
 | Member/blog asset serving | `src/app/team-assets/`, `src/app/blog-assets/` — path traversal + MIME allowlist |
 
-Site is intentionally **noindex** today. Re-enable indexing by updating `robots.ts` and layout metadata.
+Indexing is controlled by `content/site.yaml` → `indexable` (currently **true**). When true, `robots.ts` allows crawling and emits the sitemap, and pages drop the noindex meta. Individual member profiles can still opt out with frontmatter `noindex: true` (used for the template/placeholder profiles).
 
 ## Content layout (source of truth)
 
@@ -82,8 +82,6 @@ content/
 | `/home-assets/{module}/{file}` | local homepage module assets |
 | `/{member-folder}` | member `index.md` when `profile: true` (e.g. `/shengyu-zhang`, `/yurun-chen-2025-12551024`) |
 | `/team-assets/{group}/{member}/{file}` | local member assets |
-
-Legacy redirects: `/songhan` and `/song-han` → `/shengyu-zhang` in `next.config.ts`.
 
 There is no `content/pages/` directory. Profile pages are the Markdown body in each member's `index.md`.
 

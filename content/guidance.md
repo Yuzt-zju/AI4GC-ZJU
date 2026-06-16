@@ -551,6 +551,7 @@ links:
 | `order`          | 可选  | 可选  | 组内排序权重                                                                                                                                |
 | `id`             | 可选  | 可选  | 默认等于文件夹名；一般无需填写                                                                                                                       |
 | `profile`        | 可选  | 可选  | `true` 时发布个人页，URL 为 `/{成员文件夹名}`；省略或 `false` 则仅在 `/team` 展示                                                                            |
+| `noindex`        | 可选  | 可选  | `true` 时该个人页**不被搜索引擎收录**（单页 noindex + 不进 sitemap），即使全站 `indexable: true`；仍照常在 `/team` 显示。用于模板/占位主页，改成真实内容后删掉                          |
 | `links`          | 可选  | 可选  | `MemberLink[]`（邮箱请用 `email`，勿写 `mailto:`）                                                                                             |
 | `tags`           | 可选  | 可选  | 话题标签；个人页 Hero 姓名下方与 `/team` 卡片展示。自由填写任意字符串，无固定词表；顺序即展示顺序，可增删改                                                                         |
 | `email`          | 可选  | 可选  | 联系邮箱；个人页 Hero（tags 下方）与 `/team` 卡片头部（姓名/meta 下方）单独展示。`links` 中遗留的 `mailto:` 构建时自动提取                                                   |
@@ -713,7 +714,6 @@ content/home/modules/lab-partners/
 | `/team` 卡片入学/入职前缀    | `src/lib/content/constants.ts` → `TEAM_MEMBER_START_LABELS`；`src/lib/content/slug.ts` → `formatMemberStartMeta`      |
 | 安全响应头                | `src/lib/security/headers.ts`、`next.config.ts`                                                                       |
 | 爬虫策略（noindex）        | `src/app/robots.ts`、`src/app/layout.tsx`                                                                             |
-| 旧 URL 重定向            | `next.config.ts`（`/songhan`、`/song-han` → `/shengyu-zhang`）                                                          |
 | 成员资源路由               | `src/app/team-assets/[...path]/route.ts`                                                                             |
 | `/news` 分页           | `src/components/news/NewsPageClient.tsx`                                                                             |
 | `/blog` 分页           | `src/components/blog/BlogPageClient.tsx`                                                                             |

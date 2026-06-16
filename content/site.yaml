@@ -5,10 +5,10 @@ tagline: Efficient AI systems research at Zhejiang University.
 description: AI4GC Lab — efficient AI systems for multimodal generation, agents, and deployable model optimization.
 # Absolute production URL for canonical links, sitemap, and share previews.
 # Leave empty during development; set at launch (or override with the SITE_URL env var).
-url: ""
+url: "https://ai4gc.org"
 # Search-engine indexing switch. Keep false until launch; set true to allow indexing
 # (controls both robots.txt and per-page robots meta).
-indexable: false
+indexable: true
 logo: /content-assets/ai4gclab/AI4GC.png
 schoolLogo: /content-assets/zju/zju.svg
 schoolName: Zhejiang University

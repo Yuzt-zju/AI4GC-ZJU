@@ -17,20 +17,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: "/songhan",
-        destination: "/shengyu-zhang",
-        permanent: true,
-      },
-      {
-        source: "/song-han",
-        destination: "/shengyu-zhang",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
