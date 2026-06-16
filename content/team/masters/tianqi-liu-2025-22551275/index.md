@@ -31,13 +31,12 @@ My research focuses on **recommender systems** and **LLM agents** — in particu
 ## Projects
 
 - **[DeskCraft](https://arxiv.org/abs/2606.03103)** — A benchmark for desktop GUI agents with 538 executable tasks in a live Ubuntu environment, covering professional workflows and human-in-the-loop collaboration. ([code](https://github.com/mrwwk/DeskCraft))
-- **[UILoop](https://arxiv.org/abs/2604.06995)** — A UI-in-the-loop paradigm for multimodal GUI reasoning that reframes screen-to-action as a cyclic "Screen–UI Elements–Action" loop. ([code](https://github.com/zjukg/UILoop))
 
 ## Experience
 
-I have interned at several industry research labs on large language models and efficient deployment:
+I have interned at several industry teams on recommendation systems and code LLMs:
 
-- **Alibaba Taotian Group**, Meta-Code LLM Team — 2026.06 – present
+- **Alibaba Taobao & Tmall Group** — 2026.06 – present
 - **Huawei Markov Lab** — 2025.08 – 2026.05
 - **Huawei Noah's Ark Lab** — 2025.03 – 2025.05
 
