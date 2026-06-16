@@ -20,9 +20,9 @@ links:
 ---
 ## About Me
 
-Hi! I'm **Tianqi Liu (刘天琦)**, a first-year M.S. student at AI4GC Lab, Zhejiang University, advised by [Shengyu Zhang](https://person.zju.edu.cn/shengyuzhang). I received my B.S. in Software Engineering from Tongji University.
+Hi! I'm **Tianqi Liu (刘天琦)**, a first-year M.S. student at AI4GC Lab, Zhejiang University, advised by [Shengyu Zhang](https://person.zju.edu.cn/shengyuzhang). I received my B.S. in Software Engineering from Tongji University, where I graduated as an Outstanding Graduate.
 
-My research focuses on **recommender systems** and **LLM agents** — in particular model customization, lightweight on-device deployment, and reinforcement-learning-based refinement. Recently I've grown interested in **personalized, user-centric LLM agents** and the challenge of proactive interaction in human–agent collaboration.
+My research focuses on **recommender systems** and **LLM agents** — in particular model customization, lightweight on-device deployment, and reinforcement-learning-based refinement. Recently I have grown interested in **personalized, user-centric LLM agents** and the challenge of proactive interaction in human–agent collaboration.
 
 ## @papers Selected Papers
 
@@ -32,5 +32,13 @@ My research focuses on **recommender systems** and **LLM agents** — in particu
 
 - **[DeskCraft](https://arxiv.org/abs/2606.03103)** — A benchmark for desktop GUI agents with 538 executable tasks in a live Ubuntu environment, covering professional workflows and human-in-the-loop collaboration. ([code](https://github.com/mrwwk/DeskCraft))
 - **[UILoop](https://arxiv.org/abs/2604.06995)** — A UI-in-the-loop paradigm for multimodal GUI reasoning that reframes screen-to-action as a cyclic "Screen–UI Elements–Action" loop. ([code](https://github.com/zjukg/UILoop))
+
+## Experience
+
+I have interned at several industry research labs on large language models and efficient deployment:
+
+- **Alibaba Taotian Group**, Meta-Code LLM Team — 2026.06 – present
+- **Huawei Markov Lab** — 2025.08 – 2026.05
+- **Huawei Noah's Ark Lab** — 2025.03 – 2025.05
 
 ## @blog Lab Notes
