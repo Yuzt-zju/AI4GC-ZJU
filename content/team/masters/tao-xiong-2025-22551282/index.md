@@ -47,5 +47,6 @@ Feel free to reach out for collaboration!
 - osagentssurveymllm2025 | Oral
 
 ## Internships
-2026.05 - Present, XiaoMi, XiaoAi Plus, BeiJing.
-2025.10 - 2026.05, XiaoMi, MiLM Plus, BeiJing.
+
+- **2026.05 – present** · Xiaomi, Xiao Ai Plus, Beijing
+- **2025.10 – 2026.05** · Xiaomi, MiLM Plus, Beijing
