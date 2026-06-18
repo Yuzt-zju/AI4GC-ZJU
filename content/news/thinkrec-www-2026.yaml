@@ -1,5 +1,6 @@
 date: April 2026
 title: ThinkRec accepted to WWW 2026
+type: Paper
 desc: >-
   ThinkRec reframes LLM-based recommendation as a reasoning problem, letting the
   model explicitly reason about user preferences to improve recommendation

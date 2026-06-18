@@ -27,6 +27,8 @@ export type NewsItem = {
   desc: string;
   href?: string;
   featured?: boolean;
+  /** Short category label shown as a badge on the news image (e.g. "Paper", "Open Source"). */
+  type?: string;
   image?: string;
   imageAlt?: string;
   links: LinkItem[];

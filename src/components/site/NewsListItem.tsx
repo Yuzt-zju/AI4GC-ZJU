@@ -31,6 +31,9 @@ export default function NewsListItem({
   const links = getNewsLinks(item);
   const imageSrc = resolveNewsImage(item.image);
   const hasMedia = Boolean(imageSrc);
+  const typeSlug = item.type
+    ? item.type.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
+    : undefined;
 
   return (
     <article
@@ -53,6 +56,11 @@ export default function NewsListItem({
               className="site-news-item__cover"
               sizes={newsThumbSizes}
             />
+            {item.type ? (
+              <span className={cn("site-news-item__badge", typeSlug && `site-news-item__badge--${typeSlug}`)}>
+                {item.type}
+              </span>
+            ) : null}
           </div>
         ) : null}
         <div className="site-news-item__body">

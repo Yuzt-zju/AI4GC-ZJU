@@ -1,5 +1,6 @@
 date: Jun 2026
 title: RetentiveKV accepted to ACL 2026 Findings
+type: Paper
 desc: >-
   RetentiveKV reformulates KV cache eviction from discrete context truncation to
   continuous memory evolution using entropy-driven State Space Models, achieving

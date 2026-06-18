@@ -31,6 +31,7 @@ function loadNewsFile(filePath: string, fileName: string): NewsItem {
       desc,
       href: typeof data.href === "string" ? data.href : undefined,
       featured: typeof data.featured === "boolean" ? data.featured : undefined,
+      type: typeof data.type === "string" ? data.type : undefined,
       image:
         typeof data.image === "string" && data.image.trim()
           ? data.image.trim()

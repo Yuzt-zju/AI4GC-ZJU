@@ -388,6 +388,7 @@ Our work spans edge–cloud collaborative intelligence…
 | `desc`     | string       | 条件  | YAML 必填；Markdown 可省略，用正文 |
 | `tags`     | string[]     | 否   | 话题标签                     |
 | `featured` | boolean      | 否   | 进入 featured 池            |
+| `type`     | string       | 否   | 配图左上角的类型角标，如 `Paper`、`Open Source`（`Open Source` 角标为青色，其它为品牌蓝）；无配图时不显示 |
 | `href`     | string       | 否   | 无 `links` 时渲染为 Paper 链接  |
 | `image`    | string       | 否   | 配图                       |
 | `imageAlt` | string       | 否   | alt                      |

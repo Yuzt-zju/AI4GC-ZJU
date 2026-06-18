@@ -2765,7 +2765,7 @@ article.member-card.member-card--has-profile {
 
 .news-stack {
   --news-date-col: 7.5rem;
-  --news-media-width: clamp(11rem, 24vw, 14rem);
+  --news-media-width: clamp(7.5rem, 16vw, 10rem);
   --news-col-gap: clamp(0.75rem, 2vw, 1.5rem);
   border: 1px solid color-mix(in srgb, var(--color-divider) 80%, transparent);
   border-radius: 12px;
@@ -2813,15 +2813,14 @@ article.member-card.member-card--has-profile {
 .site-news-item--with-media .site-news-item__main {
   grid-template-columns: var(--news-media-width) minmax(0, 1fr);
   gap: var(--space-4);
-  align-items: stretch;
+  align-items: start;
 }
 
 .site-news-item__media {
   position: relative;
   width: var(--news-media-width);
-  min-height: calc(var(--news-media-width) * 9 / 16);
-  height: 100%;
-  align-self: stretch;
+  aspect-ratio: 16 / 9;
+  align-self: start;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
@@ -2832,6 +2831,35 @@ article.member-card.member-card--has-profile {
 .site-news-item__cover {
   object-fit: cover;
   object-position: center;
+}
+
+/* Category badge in the top-left corner of the news image. */
+.site-news-item__badge {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  color: #fff;
+  white-space: nowrap;
+  background: color-mix(in srgb, var(--color-brand) 90%, transparent);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(2px);
+}
+
+.site-news-item__badge--paper {
+  background: color-mix(in srgb, var(--color-brand) 90%, transparent);
+}
+
+.site-news-item__badge--open-source {
+  background: color-mix(in srgb, #0f766e 92%, transparent);
 }
 
 .site-news-item__body {

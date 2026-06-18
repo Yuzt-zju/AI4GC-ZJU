@@ -33,6 +33,14 @@ export const newsItemSchema = z.object({
   desc: z.string(),
   href: z.string().optional(),
   featured: z.boolean().optional(),
+  /** Short category label shown as a badge on the news image (e.g. "Paper", "Open Source"). */
+  type: z
+    .string()
+    .optional()
+    .transform((value) => {
+      const trimmed = value?.trim();
+      return trimmed ? trimmed : undefined;
+    }),
   image: optionalImagePath,
   imageAlt: z
     .string()

@@ -6,6 +6,7 @@
 
 date: Feb 2026
 title: Graph2Eval accepted to CVPR 2026
+type: Paper
 desc: >-
   Graph2Eval turns documents and web pages into a knowledge-graph task space for
   scalable, controllable evaluation of RAG and web agents.

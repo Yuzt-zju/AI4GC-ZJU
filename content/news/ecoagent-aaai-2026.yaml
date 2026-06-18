@@ -1,5 +1,6 @@
 date: Jan 2026
 title: EcoAgent accepted to AAAI 2026
+type: Paper
 desc: >-
   EcoAgent is a closed-loop device-cloud multi-agent framework for mobile
   automation that matches cloud-only baselines on AndroidWorld while cutting
