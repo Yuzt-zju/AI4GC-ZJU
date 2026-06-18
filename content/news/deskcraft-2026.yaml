@@ -1,0 +1,16 @@
+date: Jun 2026
+title: DeskCraft is open-source — a benchmark for desktop GUI agents
+desc: >-
+  DeskCraft puts desktop GUI agents to work on real professional workflows —
+  538 executable tasks spanning office, design, video, audio, 3D, and multi-app
+  software, with human-in-the-loop collaboration. Code and paper are out now.
+featured: true
+image: /home-assets/lab-projects/deskcraft.png
+imageAlt: DeskCraft desktop GUI agent benchmark overview
+links:
+  - label: GitHub
+    href: https://github.com/mrwwk/DeskCraft
+    external: true
+  - label: Paper
+    href: https://arxiv.org/abs/2606.03103
+    external: true

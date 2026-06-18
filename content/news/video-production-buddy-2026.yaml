@@ -1,0 +1,17 @@
+date: Apr 2026
+title: Video Production Buddy — an open-source AI video production agent
+desc: >-
+  We open-sourced Video Production Buddy: an AI studio that turns general-purpose
+  agents into video production experts — guiding the brief, proposal gates, asset
+  generation, composition, and review before committing to expensive generation
+  runs.
+featured: true
+image: /home-assets/lab-projects/video-production-buddy.jpg
+imageAlt: Video Production Buddy AI video production studio
+links:
+  - label: GitHub
+    href: https://github.com/video-production-buddy/video-production-buddy
+    external: true
+  - label: Project Page
+    href: https://video-production-buddy.github.io
+    external: true
