@@ -1,6 +1,7 @@
 ---
 startDate: 2025
 name: Yufan Xiong
+photo: photo.jpg
 bio: >-
   Research intern at AI4GC Lab working on efficient inference for large language
   and multimodal models — KV cache compression and long-context acceleration —
