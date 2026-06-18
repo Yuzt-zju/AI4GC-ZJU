@@ -14,7 +14,7 @@ export const TEAM_MEMBER_START_LABELS: Record<TeamGroup, string> = {
   postdocs: "Joined",
   phds: "Enrolled",
   masters: "Enrolled",
-  undergrads: "Enrolled",
+  interns: "Enrolled",
   alumni: "Enrolled",
 };
 
@@ -22,7 +22,7 @@ export const TEAM_GROUP_LABELS: Record<TeamGroup, string> = {
   postdocs: "Postdoctoral",
   phds: "Ph.D",
   masters: "Master",
-  undergrads: "Undergraduate",
+  interns: "Intern",
   alumni: "Graduated",
 };
 

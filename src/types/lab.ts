@@ -118,7 +118,7 @@ export type TeamContent = {
   postdocs: TeamMember[];
   phds: TeamMember[];
   masters: TeamMember[];
-  undergrads: TeamMember[];
+  interns: TeamMember[];
   alumni: TeamMember[];
   openings: string | null;
   openingsForm: LinkItem | null;
