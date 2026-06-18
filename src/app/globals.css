@@ -3104,6 +3104,21 @@ article.member-card.member-card--has-profile {
   animation-delay: 1.2s;
 }
 
+.blog-resource-link__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.18em;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--color-muted-text);
+}
+
+.blog-resource-link__star-icon {
+  color: #f5a623;
+  line-height: 1;
+}
+
 .blog-resource-link__arrow {
   display: inline-flex;
   color: var(--color-muted-text);

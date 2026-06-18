@@ -1,10 +1,12 @@
 import MarkdownBody from "@/components/markdown/MarkdownBody";
 import BlogResourceLinks from "@/components/blog/BlogResourceLinks";
+import type { GitHubStarsMap } from "@/lib/github-stars";
 import type { BlogResourceLink } from "@/types/lab";
 
 type BlogPostBodyProps = {
   content: string;
   links?: BlogResourceLink[];
+  githubStars?: GitHubStarsMap;
 };
 
 /** Splits the body at the first heading so the resource buttons sit after the intro. */
@@ -19,7 +21,7 @@ function splitIntro(body: string): { intro: string; rest: string } {
   };
 }
 
-export default function BlogPostBody({ content, links = [] }: BlogPostBodyProps) {
+export default function BlogPostBody({ content, links = [], githubStars }: BlogPostBodyProps) {
   if (links.length === 0) {
     return <MarkdownBody content={content} variant="blog" />;
   }
@@ -29,7 +31,7 @@ export default function BlogPostBody({ content, links = [] }: BlogPostBodyProps)
   return (
     <>
       {intro ? <MarkdownBody content={intro} variant="blog" /> : null}
-      <BlogResourceLinks links={links} />
+      <BlogResourceLinks links={links} githubStars={githubStars} />
       {rest ? <MarkdownBody content={rest} variant="blog" /> : null}
     </>
   );

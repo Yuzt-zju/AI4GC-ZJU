@@ -9,6 +9,7 @@ import { getSiteConfig } from "@/lib/content";
 import { listBlogPostSlugs, loadBlogPost } from "@/lib/content/load-blog";
 import { getRelatedPaperForBlog } from "@/lib/content/load-publications";
 import { parsePublicationVenue } from "@/lib/publications-utils";
+import { fetchGitHubStarsMap } from "@/lib/github-stars";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -56,6 +57,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const site = getSiteConfig();
+  const githubStars = await fetchGitHubStarsMap(post.links.map((link) => link.href));
   const relatedPaper = getRelatedPaperForBlog(slug);
   const relatedPaperVenue = relatedPaper
     ? parsePublicationVenue(relatedPaper.venue)
@@ -85,7 +87,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       <ContentSection className="section-page-body section-page-body--blog">
         <article className="blog-post-page">
-          <BlogPostBody content={post.body} links={post.links} />
+          <BlogPostBody content={post.body} links={post.links} githubStars={githubStars} />
 
           {relatedPaper ? (
             <aside className="blog-related-paper">

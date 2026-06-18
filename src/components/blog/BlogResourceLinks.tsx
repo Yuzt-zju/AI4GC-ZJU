@@ -1,7 +1,10 @@
+import { formatStarCount, getGitHubStars, parseGitHubRepo } from "@/lib/github-stars";
+import type { GitHubStarsMap } from "@/lib/github-stars";
 import type { BlogResourceKind, BlogResourceLink } from "@/types/lab";
 
 type BlogResourceLinksProps = {
   links: BlogResourceLink[];
+  githubStars?: GitHubStarsMap;
 };
 
 function isExternal(href: string): boolean {
@@ -63,7 +66,7 @@ function ResourceIcon({ kind }: { kind: BlogResourceKind }) {
   }
 }
 
-export default function BlogResourceLinks({ links }: BlogResourceLinksProps) {
+export default function BlogResourceLinks({ links, githubStars = {} }: BlogResourceLinksProps) {
   if (links.length === 0) {
     return null;
   }
@@ -72,6 +75,9 @@ export default function BlogResourceLinks({ links }: BlogResourceLinksProps) {
     <nav className="blog-resource-bar" aria-label="Paper resources and links">
       {links.map((link) => {
         const external = isExternal(link.href);
+        const stars = parseGitHubRepo(link.href)
+          ? getGitHubStars(link.href, githubStars)
+          : undefined;
         return (
           <a
             key={`${link.kind}-${link.href}`}
@@ -84,6 +90,14 @@ export default function BlogResourceLinks({ links }: BlogResourceLinksProps) {
               <ResourceIcon kind={link.kind} />
             </span>
             <span className="blog-resource-link__label">{link.label}</span>
+            {stars != null ? (
+              <span className="blog-resource-link__stars" aria-label={`${stars} stars`}>
+                <span className="blog-resource-link__star-icon" aria-hidden="true">
+                  ★
+                </span>
+                {formatStarCount(stars)}
+              </span>
+            ) : null}
             <span className="blog-resource-link__arrow" aria-hidden="true">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17 17 7M9 7h8v8" />
