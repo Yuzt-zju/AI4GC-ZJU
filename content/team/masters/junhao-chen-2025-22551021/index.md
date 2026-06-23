@@ -23,3 +23,9 @@ Hi! I'm **JunHao Chen(陈俊豪)**, a master's student at AI4GC Lab, Zhejiang Un
 - **2025 – present** · M.S. in Software Engineering, Zhejiang University
 - **2021 – 2025** · B.S. in Software Engineering, Wuhan University of Technology
 
+## @papers Selected Papers
+
+@bib publications
+
+- lv2025multimodalllmguidedsemanticcorrection
+- chen2026trainingfreesemanticcorrectionautoregressivevisualmodels
